@@ -1,13 +1,50 @@
 .App {
-  text-align: center;
   height: 200vh;
   background-color: black;
-  background-image: url("../public/img/image00.png");
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  background-position: center;
 }
 
+.App-title {
+  height: 100vh;
+  width: 100%;
+  position: absolute;
+  z-index: 3;
+}
+
+.App-image-container {
+  display: flex;
+  /* margin-left: auto;
+  margin-right: auto; */
+  height: 100vh;
+  /* width: auto; */
+  z-index: 1;
+  /* max-height: 100%;
+  max-width: 100%; */
+  /* justify-content: center;
+  position: fixed; */
+  justify-content: center;
+  align-items: center;
+}
+.App-image {
+  max-height: 100%;
+  max-width: 100%;
+  position: fixed;
+}
+
+.Gallery-button {
+  position: fixed;
+  z-index: 2;
+  font-size: 20px;
+  margin: 5px;
+  padding: 5px;
+  background-color: white;
+  border-radius: 5px;
+}
+.Drawer {
+  display: flex;
+  background-color: #333;
+  color: #fff;
+  height: 100vh;
+}
 .App-logo {
   height: 40vmin;
   pointer-events: none;
@@ -30,10 +67,4 @@
   to {
     transform: rotate(360deg);
   }
-}
-
-.App-title {
-  width: auto;
-  height: 100vh;
-
 }
