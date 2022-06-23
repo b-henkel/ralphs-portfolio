@@ -12,18 +12,12 @@
 
 .App-image-container {
   display: flex;
-  /* margin-left: auto;
-  margin-right: auto; */
   height: 100vh;
-  /* width: auto; */
   z-index: 1;
-  /* max-height: 100%;
-  max-width: 100%; */
-  /* justify-content: center;
-  position: fixed; */
   justify-content: center;
   align-items: center;
 }
+
 .App-image {
   max-height: 100%;
   max-width: 100%;
@@ -39,11 +33,26 @@
   background-color: white;
   border-radius: 5px;
 }
+ul {
+  list-style-type: none;
+}
+li {
+  padding: 3px;
+}
+h1 {
+  padding: 10px;
+}
 .Drawer {
   display: flex;
   background-color: #333;
   color: #fff;
   height: 100vh;
+  flex-direction: column;
+}
+.App-catagory {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
 }
 .App-logo {
   height: 40vmin;
