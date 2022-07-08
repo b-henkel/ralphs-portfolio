@@ -3,12 +3,16 @@ import { useState } from 'react';
 import './App.css';
 import Drawer from 'react-modern-drawer';
 import 'react-modern-drawer/dist/index.css';
-import { RiGalleryLine } from 'react-icons/ri';
+import { RiGalleryLine, RiCloseCircleLine } from 'react-icons/ri';
 import imageData from './images.json';
+import Cv from './components/Cv';
+import Statement from './components/Statement';
 
 function App() {
   const [imageShown, setImageShown] = useState(imageData.images[0]);
   const [isOpen, setIsOpen] = useState(false);
+  const [cvOpen, setCvOpen] = useState(false);
+  const [statementOpen, setStatementOpen] = useState(false);
 
   const toggleDrawer = () => {
     setIsOpen((prevState) => !prevState);
@@ -27,6 +31,10 @@ function App() {
     <div className='App'>
       <Drawer size='25vw' open={isOpen} onClose={toggleDrawer} direction='left'>
         <div className='Drawer'>
+          <RiCloseCircleLine
+            className='Close-button'
+            onClick={() => setIsOpen(false)}
+          />
           {imageData.catagories.map((item, index) => {
             return (
               <>
@@ -39,7 +47,11 @@ function App() {
                           src={image.source}
                           alt={image.title}
                           style={{ maxHeight: '10vh' }}
-                          onClick={() => setImageShown(image)}
+                          onClick={() => {
+                            setImageShown(image);
+                            setCvOpen(false);
+                            setStatementOpen(false);
+                          }}
                         ></img>
                       </li>
                     );
@@ -48,11 +60,31 @@ function App() {
               </>
             );
           })}
+          <div className='Drawer-nav'>
+            <button
+              onClick={() => {
+                setStatementOpen(true);
+                setCvOpen(false);
+              }}
+            >
+              Artist Statement
+            </button>
+            <button
+              onClick={() => {
+                setCvOpen(true);
+                setStatementOpen(false);
+              }}
+            >
+              CV
+            </button>
+          </div>
         </div>
       </Drawer>
       <img className='App-title' src='/img/splash.png' alt='splash' />
       <RiGalleryLine className='Gallery-button' onClick={toggleDrawer} />
       <div className='App-image-container'>
+        {cvOpen && <Cv setCvOpen={setCvOpen} />}
+        {statementOpen && <Statement setStatementOpen={setStatementOpen} />}
         <img
           className='App-image'
           src={imageShown.source}

@@ -8,6 +8,10 @@
   width: 100%;
   position: absolute;
   z-index: 3;
+  mask: url('mask.bmp') center;
+  mask-size: 100% 100vh;
+  mask-repeat: no-repeat;
+  mask-mode: luminance;
 }
 
 .App-image-container {
@@ -55,6 +59,9 @@ h1 {
   flex-wrap: wrap;
   flex-direction: row;
 }
+.Drawer-nav {
+  display: flex;
+}
 .App-logo {
   height: 40vmin;
   pointer-events: none;
@@ -77,4 +84,39 @@ h1 {
   to {
     transform: rotate(360deg);
   }
+}
+
+.Modal-background {
+  height: 100%;
+  width: 100%;
+  background-color: #000;
+  opacity: 100%;
+  position: fixed;
+  z-index: 8;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.Cv-content {
+  height: 50%;
+  width: 50%;
+  background-color: #fff;
+  color: #000;
+  opacity: 100%;
+  z-index: 9;
+}
+
+.Statement-content {
+  height: 50%;
+  width: 50%;
+  background-color: #fff;
+  color: #000;
+  opacity: 100%;
+  z-index: 9;
+}
+
+.Close-button {
+  color: #fff;
+  font-size: 25px;
 }
