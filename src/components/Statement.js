@@ -12,7 +12,7 @@ function Statement({ setStatementOpen }) {
       />
       <div className='Statement-content'>
         <h1>Artist Statement</h1>
-        <div>
+        <div className='Statement-body'>
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam
           nesciunt totam vitae molestias quod rerum quibusdam quam, voluptatibus
           doloribus dolore culpa sequi repudiandae consequatur illo eius

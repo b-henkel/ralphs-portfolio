@@ -38,7 +38,7 @@ function App() {
           {imageData.catagories.map((item, index) => {
             return (
               <>
-                <h1>{item}</h1>
+                <div className='Catagory-heading'>{item}</div>
                 <ul className='App-catagory'>
                   {imagesSorted[index].map((image) => {
                     return (
@@ -60,8 +60,8 @@ function App() {
               </>
             );
           })}
-          <div className='Drawer-nav'>
-            <button
+          <footer className='Drawer-nav'>
+            <button className='Nav-button'
               onClick={() => {
                 setStatementOpen(true);
                 setCvOpen(false);
@@ -69,7 +69,7 @@ function App() {
             >
               Artist Statement
             </button>
-            <button
+            <button className='Nav-button'
               onClick={() => {
                 setCvOpen(true);
                 setStatementOpen(false);
@@ -77,7 +77,7 @@ function App() {
             >
               CV
             </button>
-          </div>
+          </footer>
         </div>
       </Drawer>
       <img className='App-title' src='/img/splash.png' alt='splash' />
