@@ -35,18 +35,50 @@
   margin: 5px;
   padding: 5px;
   color: #fff;
+  text-shadow: 2px 2px #333;
+}
+
+.Info-button {
+  position: fixed;
+  top: 0;
+  right: 0;
+  z-index: 2;
+  font-size: 30px;
+  margin: 5px;
+  padding: 5px;
+  color: #fff;
+  text-shadow: 2px 2px #333;
+}
+.Left-arrow {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  z-index: 2;
+  font-size: 30px;
+  margin: 5px;
+  padding: 5px;
+  color: #fff;
+  text-shadow: 2px 2px #333;
+}
+.Right-arrow {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  z-index: 2;
+  font-size: 30px;
+  margin: 5px;
+  padding: 5px;
+  color: #fff;
+  text-shadow: 2px 2px #333;
 }
 
 ul {
   list-style-type: none;
 }
 
-li {
+.List-item {
   padding: 3px;
-}
-
-h1 {
-  padding: 10px;
+  margin: 3px;
 }
 
 .Drawer {
@@ -58,10 +90,20 @@ h1 {
   overflow: scroll;
 }
 
+.Info {
+  display: flex;
+  background-color: #333;
+  color: #fff;
+  height: 100vh;
+  flex-direction: column;
+  overflow: scroll;
+}
 .App-catagory {
   display: flex;
   flex-wrap: wrap;
   flex-direction: row;
+  padding: 3px;
+  margin: 3px;
 }
 .Drawer-nav {
   display: flex;
@@ -70,6 +112,10 @@ h1 {
   width: 100%;
   text-align: center;
   justify-content: center;
+  position: fixed;
+  bottom: 0;
+  padding: 3px;
+  margin: 3px;
 }
 .App-logo {
   height: 40vmin;
@@ -111,13 +157,17 @@ h1 {
   z-index: 9;
   overflow: scroll;
 }
-.Statement-body{
+.Statement-body {
   margin: 16px;
 }
 .Close-button {
   color: #fff;
-  font-size: 25px;
-  padding: 8px;
+  font-size: 1vw;
+  margin: 5px;
+  padding: 5px;
+  position: fixed;
+  top: 0;
+  right: 0;
 }
 .Nav-button {
   display: flex;
