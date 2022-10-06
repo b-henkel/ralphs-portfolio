@@ -15,11 +15,12 @@ import Cv from './components/Cv';
 import Statement from './components/Statement';
 
 function App() {
-  const [imageShown, setImageShown] = useState(imageData.images[0]);
+  const [imageShown, setImageShown] = useState(0);
   const [isOpen, setIsOpen] = useState(false);
   const [infoIsOpen, setInfoIsOpen] = useState(false);
   const [cvOpen, setCvOpen] = useState(false);
   const [statementOpen, setStatementOpen] = useState(false);
+  const imagesArr = imageData.images;
 
   const toggleDrawer = () => {
     setIsOpen((prevState) => !prevState);
@@ -30,12 +31,30 @@ function App() {
 
   const imagesSorted = imageData.catagories.map(() => []);
   for (let i = 0; i < imageData.catagories.length; i++) {
-    imageData.images.forEach((item) => {
+    imagesArr.forEach((item) => {
       if (item.catagory === imageData.catagories[i]) {
         imagesSorted[i].push(item);
       }
     });
   }
+
+  const prevButtonClick = () => {
+    if (imageShown === 0) {
+      setImageShown(imagesArr.length - 1);
+    } else {
+      setImageShown(imageShown - 1);
+    }
+  };
+
+  const nextButtonClick = () => {
+    if (imageShown === imagesArr.length - 1) {
+      setImageShown(0);
+    } else {
+      setImageShown(imageShown + 1);
+    }
+  };
+
+  const styles = { backgroundColor: '#000', opacity: '90%' };
 
   return (
     <div className='App'>
@@ -58,7 +77,11 @@ function App() {
                           alt={image.title}
                           style={{ maxHeight: '10vh' }}
                           onClick={() => {
-                            setImageShown(image);
+                            setImageShown(
+                              imagesArr.findIndex(
+                                (elm) => elm.title === image.title
+                              )
+                            );
                             setCvOpen(false);
                             setStatementOpen(false);
                           }}
@@ -93,6 +116,7 @@ function App() {
         </div>
       </Drawer>
       <Drawer
+        style={styles}
         size='25vh'
         open={infoIsOpen}
         onClose={toggleInfo}
@@ -103,9 +127,9 @@ function App() {
             className='Close-button'
             onClick={() => setInfoIsOpen(false)}
           />
-          <h1>{imageShown.title}</h1>
-          <h3>{imageShown.date}</h3>
-          <p>{imageShown.info}</p>
+          <h1>{imagesArr[imageShown].title}</h1>
+          <h3>{imagesArr[imageShown].date}</h3>
+          <p>{imagesArr[imageShown].info}</p>
         </div>
       </Drawer>
       <img className='App-title' src='/img/splash.png' alt='splash' />
@@ -116,12 +140,15 @@ function App() {
         {statementOpen && <Statement setStatementOpen={setStatementOpen} />}
         <img
           className='App-image'
-          src={imageShown.source}
-          alt={imageShown.title}
+          src={imagesArr[imageShown].source}
+          alt={imagesArr[imageShown].title}
         />
       </div>
-      <RiArrowLeftCircleLine className='Left-arrow' />
-      <RiArrowRightCircleLine className='Right-arrow' />
+      <RiArrowLeftCircleLine className='Left-arrow' onClick={prevButtonClick} />
+      <RiArrowRightCircleLine
+        className='Right-arrow'
+        onClick={nextButtonClick}
+      />
     </div>
   );
 }

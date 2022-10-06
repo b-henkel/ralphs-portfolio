@@ -31,7 +31,7 @@
 .Gallery-button {
   position: fixed;
   z-index: 2;
-  font-size: 30px;
+  font-size: 1vw;
   margin: 5px;
   padding: 5px;
   color: #fff;
@@ -43,7 +43,7 @@
   top: 0;
   right: 0;
   z-index: 2;
-  font-size: 30px;
+  font-size: 1vw;
   margin: 5px;
   padding: 5px;
   color: #fff;
@@ -54,7 +54,7 @@
   bottom: 0;
   left: 0;
   z-index: 2;
-  font-size: 30px;
+  font-size: 1vw;
   margin: 5px;
   padding: 5px;
   color: #fff;
@@ -65,7 +65,7 @@
   bottom: 0;
   right: 0;
   z-index: 2;
-  font-size: 30px;
+  font-size: 1vw;
   margin: 5px;
   padding: 5px;
   color: #fff;
@@ -160,6 +160,7 @@ ul {
 .Statement-body {
   margin: 16px;
 }
+
 .Close-button {
   color: #fff;
   font-size: 1vw;
