@@ -5,13 +5,12 @@
 
 .App-title {
   height: 100vh;
-  width: 100%;
+  width: 100vw;
   position: absolute;
   z-index: 3;
-  mask: url('mask.bmp') center;
-  mask-size: 100% 100vh;
+  mask: url('mask.svg') center;
+  mask-size: 100vw 100vh;
   mask-repeat: no-repeat;
-  mask-mode: luminance;
 }
 
 .App-image-container {
@@ -31,7 +30,7 @@
 .Gallery-button {
   position: fixed;
   z-index: 2;
-  font-size: 1vw;
+  font-size: calc(14px + 0.45vw);
   margin: 5px;
   padding: 5px;
   color: #fff;
@@ -43,29 +42,31 @@
   top: 0;
   right: 0;
   z-index: 2;
-  font-size: 1vw;
+  font-size: calc(14px + 0.45vw);
   margin: 5px;
   padding: 5px;
   color: #fff;
   text-shadow: 2px 2px #333;
 }
+
 .Left-arrow {
   position: fixed;
   bottom: 0;
   left: 0;
   z-index: 2;
-  font-size: 1vw;
+  font-size: calc(14px + 0.45vw);
   margin: 5px;
   padding: 5px;
   color: #fff;
   text-shadow: 2px 2px #333;
 }
+
 .Right-arrow {
   position: fixed;
   bottom: 0;
   right: 0;
   z-index: 2;
-  font-size: 1vw;
+  font-size: calc(14px + 0.45vw);
   margin: 5px;
   padding: 5px;
   color: #fff;
@@ -81,23 +82,12 @@ ul {
   margin: 3px;
 }
 
-.Drawer {
-  display: flex;
-  background-color: #333;
+.Info-text {
   color: #fff;
-  height: 100vh;
-  flex-direction: column;
-  overflow: scroll;
+  margin: 5px 15vw;
+  overflow: auto;
 }
 
-.Info {
-  display: flex;
-  background-color: #333;
-  color: #fff;
-  height: 100vh;
-  flex-direction: column;
-  overflow: scroll;
-}
 .App-catagory {
   display: flex;
   flex-wrap: wrap;
@@ -105,6 +95,7 @@ ul {
   padding: 3px;
   margin: 3px;
 }
+
 .Drawer-nav {
   display: flex;
   left: 0;
@@ -117,6 +108,7 @@ ul {
   padding: 3px;
   margin: 3px;
 }
+
 .App-logo {
   height: 40vmin;
   pointer-events: none;
@@ -139,37 +131,47 @@ ul {
 }
 
 .Cv-content {
-  height: 50%;
-  width: 50%;
+  width: 40%;
   background-color: #fff;
   color: #000;
   opacity: 100%;
   z-index: 9;
-  overflow: scroll;
+  overflow: auto;
+  padding: 25px 50px;
 }
 
 .Statement-content {
-  height: 50%;
-  width: 50%;
+  width: 40%;
   background-color: #fff;
   color: #000;
   opacity: 100%;
   z-index: 9;
-  overflow: scroll;
+  overflow: auto;
+  padding: 25px 50px;
 }
+
 .Statement-body {
   margin: 16px;
 }
 
 .Close-button {
   color: #fff;
-  font-size: 1vw;
+  font-size: calc(14px + 0.45vw);
   margin: 5px;
   padding: 5px;
   position: fixed;
   top: 0;
   right: 0;
 }
+
+.Modal-close-button {
+  color: #000;
+  font-size: calc(14px + 0.45vw);
+  margin: 5px;
+  padding: 5px;
+  text-align: right;
+}
+
 .Nav-button {
   display: flex;
   background-color: #fff;
@@ -182,6 +184,7 @@ ul {
   margin: 4px 2px;
   cursor: pointer;
 }
+
 .Catagory-heading {
   font-size: 18px;
   color: #fff;

@@ -54,12 +54,33 @@ function App() {
     }
   };
 
-  const styles = { backgroundColor: '#000', opacity: '90%' };
+  const styles = { backgroundColor: 'rgba(50,50,50,0.9)' };
+
+  const handleKeyDown = (e) => {
+    if (e.key === 'ArrowLeft') {
+      prevButtonClick();
+    }
+    if (e.key === 'ArrowRight') {
+      nextButtonClick();
+    }
+    if (e.key === 'Escape') {
+      setIsOpen(false);
+      setInfoIsOpen(false);
+      setCvOpen(false);
+      setStatementOpen(false);
+    }
+  };
 
   return (
-    <div className='App'>
-      <Drawer size='25vw' open={isOpen} onClose={toggleDrawer} direction='left'>
-        <div className='Drawer'>
+    <div className='App' tabIndex='0' onKeyDown={(e) => handleKeyDown(e)}>
+      <Drawer
+        size='25vw'
+        open={isOpen}
+        onClose={toggleDrawer}
+        direction='left'
+        style={styles}
+      >
+        <div>
           <RiCloseCircleLine
             className='Close-button'
             onClick={() => setIsOpen(false)}
@@ -117,19 +138,21 @@ function App() {
       </Drawer>
       <Drawer
         style={styles}
-        size='25vh'
+        size='35vh'
         open={infoIsOpen}
         onClose={toggleInfo}
         direction='bottom'
       >
-        <div className='Info'>
+        <div>
           <RiCloseCircleLine
             className='Close-button'
             onClick={() => setInfoIsOpen(false)}
           />
-          <h1>{imagesArr[imageShown].title}</h1>
-          <h3>{imagesArr[imageShown].date}</h3>
-          <p>{imagesArr[imageShown].info}</p>
+          <div className='Info-text'>
+            <h1>{imagesArr[imageShown].title}</h1>
+            <h3>{imagesArr[imageShown].date}</h3>
+            <p>{imagesArr[imageShown].info}</p>
+          </div>
         </div>
       </Drawer>
       <img className='App-title' src='/img/splash.png' alt='splash' />
