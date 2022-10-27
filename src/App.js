@@ -54,7 +54,7 @@ function App() {
     }
   };
 
-  const styles = { backgroundColor: 'rgba(50,50,50,0.9)' };
+  const styles = { backgroundColor: 'rgba(50,50,50,0.9)', overflow: 'scroll' };
 
   const handleKeyDown = (e) => {
     if (e.key === 'ArrowLeft') {
