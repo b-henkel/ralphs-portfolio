@@ -140,7 +140,7 @@ ul {
   align-items: center;
 }
 
-.Cv-content {
+.Modal-content {
   max-width: 60%;
   max-height: 40%;
   width: 40%;
@@ -151,26 +151,10 @@ ul {
   overflow: scroll;
   padding: 25px 50px;
 }
-/* Hide scrollbar for Chrome, Safari and Opera */
-.Cv-content::-webkit-scrollbar {
+.Modal-content::-webkit-scrollbar {
   display: none;
 }
-
-.Statement-content {
-  max-width: 60%;
-  max-height: 40%;
-  width: 40%;
-  background-color: #fff;
-  color: #000;
-  opacity: 100%;
-  z-index: 4;
-  overflow: scroll;
-  padding: 25px 50px;
-}
-.Statement-content::-webkit-scrollbar {
-  display: none;
-}
-.Statement-body {
+.Modal-body {
   margin: 16px;
 }
 
@@ -209,15 +193,4 @@ ul {
   font-size: 18px;
   color: #fff;
   padding: 16px;
-}
-
-.Drawer-style {
-  overflow: scroll;
-  overflow-x: hidden;
-  -ms-overflow-style: none;
-  scrollbar-width: none;
-}
-
-.Drawer-style::-webkit-scrollbar {
-  display: none;
 }

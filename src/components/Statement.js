@@ -4,7 +4,7 @@ import { RiCloseCircleLine } from 'react-icons/ri';
 function Statement({ setStatementOpen }) {
   return (
     <div className='Modal-background'>
-      <div className='Statement-content'>
+      <div className='Modal-content'>
         <div className='Modal-close-button'>
           <RiCloseCircleLine
             onClick={() => {
@@ -14,7 +14,7 @@ function Statement({ setStatementOpen }) {
         </div>
         <div>
           <h1>Artist Statement</h1>
-          <div className='Statement-body'>
+          <div className='Modal-body'>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam
             nesciunt totam vitae molestias quod rerum quibusdam quam,
             voluptatibus doloribus dolore culpa sequi repudiandae consequatur

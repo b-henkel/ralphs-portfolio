@@ -4,7 +4,7 @@ import { RiCloseCircleLine } from 'react-icons/ri';
 function Cv({ setCvOpen }) {
   return (
     <div className='Modal-background'>
-      <div className='Cv-content'>
+      <div className='Modal-content'>
         <div className='Modal-close-button'>
           <RiCloseCircleLine
             onClick={() => {
