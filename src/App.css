@@ -16,7 +16,7 @@
   height: 100vh;
   width: calc(100vw - (100vw - 100%));
   position: absolute;
-  z-index: 3;
+  z-index: 5;
   mask: url('mask01.png') center;
   mask-size: calc(100vw - (100vw - 100%)) 100vh;
   mask-repeat: no-repeat;
@@ -25,7 +25,7 @@
 .App-image-container {
   display: flex;
   height: 100vh;
-  z-index: 1;
+  z-index: 5;
   justify-content: center;
   align-items: center;
 }
@@ -96,6 +96,9 @@ ul {
   margin: 5px 15vw;
   overflow: scroll;
 }
+.Info-text::-webkit-scrollbar {
+  display: none;
+}
 
 .App-catagory {
   display: flex;
@@ -112,8 +115,6 @@ ul {
   width: 100%;
   text-align: center;
   justify-content: center;
-  position: fixed;
-  bottom: 0;
   padding: 3px;
   margin: 3px;
 }
@@ -133,34 +134,42 @@ ul {
   background-color: #000;
   opacity: 100%;
   position: fixed;
-  z-index: 8;
+  z-index: 3;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
 .Cv-content {
-  max-width: 80%;
-  max-height: 80%;
+  max-width: 60%;
+  max-height: 40%;
   width: 40%;
   background-color: #fff;
   color: #000;
   opacity: 100%;
-  z-index: 9;
+  z-index: 4;
   overflow: scroll;
   padding: 25px 50px;
+}
+/* Hide scrollbar for Chrome, Safari and Opera */
+.Cv-content::-webkit-scrollbar {
+  display: none;
 }
 
 .Statement-content {
+  max-width: 60%;
+  max-height: 40%;
   width: 40%;
   background-color: #fff;
   color: #000;
   opacity: 100%;
-  z-index: 9;
+  z-index: 4;
   overflow: scroll;
   padding: 25px 50px;
 }
-
+.Statement-content::-webkit-scrollbar {
+  display: none;
+}
 .Statement-body {
   margin: 16px;
 }
@@ -200,4 +209,15 @@ ul {
   font-size: 18px;
   color: #fff;
   padding: 16px;
+}
+
+.Drawer-style {
+  overflow: scroll;
+  overflow-x: hidden;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.Drawer-style::-webkit-scrollbar {
+  display: none;
 }

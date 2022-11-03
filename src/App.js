@@ -54,7 +54,15 @@ function App() {
     }
   };
 
-  const styles = { backgroundColor: 'rgba(50,50,50,0.9)', overflow: 'scroll' };
+  const styles = {
+    backgroundColor: 'rgba(50,50,50,0.9)',
+    overflow: 'scroll',
+    overflowX: 'hidden',
+    overflowY: 'auto',
+    msOverflowStyle: 'none',
+    scrollbarWidth: 'none',
+    webkitScrollbar: { display: 'none' },
+  };
 
   const handleKeyDown = (e) => {
     if (e.key === 'ArrowLeft') {
@@ -80,40 +88,42 @@ function App() {
         direction='left'
         style={styles}
       >
-        <div>
+        <div className='Drawer-style'>
           <RiCloseCircleLine
             className='Close-button'
             onClick={() => setIsOpen(false)}
           />
-          {imageData.catagories.map((item, index) => {
-            return (
-              <>
-                <div className='Catagory-heading'>{item}</div>
-                <ul className='App-catagory'>
-                  {imagesSorted[index].map((image) => {
-                    return (
-                      <li className='List-item'>
-                        <img
-                          src={image.source}
-                          alt={image.title}
-                          style={{ maxHeight: '10vh' }}
-                          onClick={() => {
-                            setImageShown(
-                              imagesArr.findIndex(
-                                (elm) => elm.title === image.title
-                              )
-                            );
-                            setCvOpen(false);
-                            setStatementOpen(false);
-                          }}
-                        ></img>
-                      </li>
-                    );
-                  })}
-                </ul>
-              </>
-            );
-          })}
+          <div>
+            {imageData.catagories.map((item, index) => {
+              return (
+                <>
+                  <div className='Catagory-heading'>{item}</div>
+                  <ul className='App-catagory'>
+                    {imagesSorted[index].map((image) => {
+                      return (
+                        <li className='List-item'>
+                          <img
+                            src={image.source}
+                            alt={image.title}
+                            style={{ maxHeight: '10vh' }}
+                            onClick={() => {
+                              setImageShown(
+                                imagesArr.findIndex(
+                                  (elm) => elm.title === image.title
+                                )
+                              );
+                              setCvOpen(false);
+                              setStatementOpen(false);
+                            }}
+                          ></img>
+                        </li>
+                      );
+                    })}
+                  </ul>
+                </>
+              );
+            })}
+          </div>
           <footer className='Drawer-nav'>
             <button
               className='Nav-button'
@@ -143,7 +153,7 @@ function App() {
         onClose={toggleInfo}
         direction='bottom'
       >
-        <div>
+        <div className='Drawer-style'>
           <RiCloseCircleLine
             className='Close-button'
             onClick={() => setInfoIsOpen(false)}
