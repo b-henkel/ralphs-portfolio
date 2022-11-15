@@ -11,14 +11,12 @@ import {
   RiArrowRightCircleLine,
 } from 'react-icons/ri';
 import imageData from './images.json';
-import Cv from './components/Cv';
 import Statement from './components/Statement';
 
 function App() {
   const [imageShown, setImageShown] = useState(0);
   const [isOpen, setIsOpen] = useState(false);
   const [infoIsOpen, setInfoIsOpen] = useState(false);
-  const [cvOpen, setCvOpen] = useState(false);
   const [statementOpen, setStatementOpen] = useState(false);
   const imagesArr = imageData.images;
 
@@ -74,7 +72,7 @@ function App() {
     if (e.key === 'Escape') {
       setIsOpen(false);
       setInfoIsOpen(false);
-      setCvOpen(false);
+
       setStatementOpen(false);
     }
   };
@@ -82,7 +80,7 @@ function App() {
   return (
     <div className='App' tabIndex='0' onKeyDown={(e) => handleKeyDown(e)}>
       <Drawer
-        size='25vw'
+        size='20vw'
         open={isOpen}
         onClose={toggleDrawer}
         direction='left'
@@ -103,7 +101,7 @@ function App() {
                       return (
                         <li className='List-item'>
                           <img
-                            src={image.source}
+                            src={image.thumb}
                             alt={image.title}
                             style={{ maxHeight: '10vh' }}
                             onClick={() => {
@@ -112,7 +110,7 @@ function App() {
                                   (elm) => elm.title === image.title
                                 )
                               );
-                              setCvOpen(false);
+
                               setStatementOpen(false);
                             }}
                           ></img>
@@ -129,26 +127,16 @@ function App() {
               className='Nav-button'
               onClick={() => {
                 setStatementOpen(true);
-                setCvOpen(false);
               }}
             >
               Artist Statement
-            </button>
-            <button
-              className='Nav-button'
-              onClick={() => {
-                setCvOpen(true);
-                setStatementOpen(false);
-              }}
-            >
-              CV
             </button>
           </footer>
         </div>
       </Drawer>
       <Drawer
         style={styles}
-        size='35vh'
+        size='25vh'
         open={infoIsOpen}
         onClose={toggleInfo}
         direction='bottom'
@@ -160,16 +148,16 @@ function App() {
           />
           <div className='Info-text'>
             <h1>{imagesArr[imageShown].title}</h1>
+            <br></br>
             <h3>{imagesArr[imageShown].date}</h3>
             <p>{imagesArr[imageShown].info}</p>
           </div>
         </div>
       </Drawer>
-      <img className='App-title' src='/img/splash.png' alt='splash' />
+      <img className='App-title' src='/img/image07.jpg' alt='splash' />
       <RiGalleryLine className='Gallery-button' onClick={toggleDrawer} />
       <RiInformationLine className='Info-button' onClick={toggleInfo} />
       <div className='App-image-container'>
-        {cvOpen && <Cv setCvOpen={setCvOpen} />}
         {statementOpen && <Statement setStatementOpen={setStatementOpen} />}
         <img
           className='App-image'

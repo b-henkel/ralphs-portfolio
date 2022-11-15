@@ -17,7 +17,7 @@
   width: calc(100vw - (100vw - 100%));
   position: absolute;
   z-index: 5;
-  mask: url('mask01.png') center;
+  mask: url('ralph-mask.png') center;
   mask-size: calc(100vw - (100vw - 100%)) 100vh;
   mask-repeat: no-repeat;
 }
@@ -93,8 +93,11 @@ ul {
 
 .Info-text {
   color: #fff;
-  margin: 5px 15vw;
+  width: 40vw;
+  margin: 25px 25vw;
+  padding: 25px;
   overflow: scroll;
+  justify-content: center;
 }
 .Info-text::-webkit-scrollbar {
   display: none;
@@ -116,7 +119,7 @@ ul {
   text-align: center;
   justify-content: center;
   padding: 3px;
-  margin: 3px;
+  margin: 20px 5px;
 }
 
 .App-logo {

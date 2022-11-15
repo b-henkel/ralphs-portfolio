@@ -1,73 +1,107 @@
 {
-  "catagories": ["Paintings", "Drawings", "Sculpture"],
+  "catagories": ["Sculpture"],
   "images": [
     {
       "title": "image00",
-      "catagory": "Paintings",
-      "source": "/img/image00.png",
+      "catagory": "Sculpture",
+      "source": "/img/image00.jpg",
+      "thumb": "/img/sml/image00sml.jpg",
       "date": "2022",
       "info": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt necessitatibus est reiciendis. Alias ab eius dicta, provident quidem ad? Cumque magni architecto ratione repellendus enim sit labore explicabo voluptate suscipit!"
     },
     {
       "title": "image01",
-      "catagory": "Paintings",
-      "source": "/img/image01.png",
+      "catagory": "Sculpture",
+      "source": "/img/image01.jpg",
+      "thumb": "/img/sml/image01sml.jpg",
       "date": "2022",
       "info": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt necessitatibus est reiciendis. Cumque magni architecto ratione repellendus enim sit labore explicabo voluptate suscipit!"
     },
     {
       "title": "image02",
-      "catagory": "Paintings",
-      "source": "/img/image02.png",
+      "catagory": "Sculpture",
+      "source": "/img/image02.jpg",
+      "thumb": "/img/sml/image02sml.jpg",
       "date": "2022",
       "info": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt necessitatibus est reiciendis. Alias ab eius dicta, provident quidem ad? Cumque magni architecto ratione repellendus enim sit labore explicabo voluptate suscipit!"
     },
     {
       "title": "image03",
-      "catagory": "Paintings",
-      "source": "/img/image03.png",
+      "catagory": "Sculpture",
+      "source": "/img/image03.jpg",
+      "thumb": "/img/sml/image03sml.jpg",
       "date": "2022",
       "info": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt necessitatibus est reiciendis. Alias ab eius dicta, provident quidem ad? "
     },
     {
       "title": "image04",
-      "catagory": "Paintings",
-      "source": "/img/image04.png",
+      "catagory": "Sculpture",
+      "source": "/img/image04.jpg",
+      "thumb": "/img/sml/image04sml.jpg",
       "date": "2022",
       "info": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt necessitatibus est reiciendis. Alias ab eius dicta, provident quidem ad? Cumque magni architecto ratione repellendus enim sit labore explicabo voluptate suscipit!"
     },
     {
       "title": "image05",
-      "catagory": "Drawings",
-      "source": "/img/image05.png",
+      "catagory": "Sculpture",
+      "source": "/img/image05.jpg",
+      "thumb": "/img/sml/image05sml.jpg",
       "date": "2022",
       "info": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt necessitatibus est reiciendis. Alias ab eius dicta, provident quidem ad? Cumque magni architecto ratione repellendus enim sit labore explicabo voluptate suscipit!"
     },
     {
       "title": "image06",
-      "catagory": "Drawings",
-      "source": "/img/image06.png",
+      "catagory": "Sculpture",
+      "source": "/img/image06.jpg",
+      "thumb": "/img/sml/image06sml.jpg",
       "date": "2022",
       "info": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt necessitatibus est reiciendis. Alias ab eius dicta, provident quidem ad? Cumque magni architecto ratione repellendus enim sit labore explicabo voluptate suscipit!"
     },
     {
       "title": "image07",
-      "catagory": "Drawings",
-      "source": "/img/image07.png",
+      "catagory": "Sculpture",
+      "source": "/img/image07.jpg",
+      "thumb": "/img/sml/image07sml.jpg",
       "date": "2022",
       "info": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt necessitatibus est reiciendis. Alias ab eius dicta, provident quidem ad? Cumque magni architecto ratione repellendus enim sit labore explicabo voluptate suscipit!"
     },
     {
       "title": "image08",
       "catagory": "Sculpture",
-      "source": "/img/image08.png",
+      "source": "/img/image08.jpg",
+      "thumb": "/img/sml/image08sml.jpg",
       "date": "2022",
       "info": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt necessitatibus est reiciendis. Alias ab eius dicta, provident quidem ad? Cumque magni architecto ratione repellendus enim sit labore explicabo voluptate suscipit!"
     },
     {
       "title": "image09",
       "catagory": "Sculpture",
-      "source": "/img/image09.png",
+      "source": "/img/image09.jpg",
+      "thumb": "/img/sml/image09sml.jpg",
+      "date": "2022",
+      "info": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt necessitatibus est reiciendis. Alias ab eius dicta, provident quidem ad? Cumque magni architecto ratione repellendus enim sit labore explicabo voluptate suscipit!"
+    },
+    {
+      "title": "image10",
+      "catagory": "Sculpture",
+      "source": "/img/image10.jpg",
+      "thumb": "/img/sml/image10sml.jpg",
+      "date": "2022",
+      "info": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt necessitatibus est reiciendis. Alias ab eius dicta, provident quidem ad? Cumque magni architecto ratione repellendus enim sit labore explicabo voluptate suscipit!"
+    },
+    {
+      "title": "image11",
+      "catagory": "Sculpture",
+      "source": "/img/image11.jpg",
+      "thumb": "/img/sml/image11sml.jpg",
+      "date": "2022",
+      "info": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt necessitatibus est reiciendis. Alias ab eius dicta, provident quidem ad? Cumque magni architecto ratione repellendus enim sit labore explicabo voluptate suscipit!"
+    },
+    {
+      "title": "image12",
+      "catagory": "Sculpture",
+      "source": "/img/image12.jpg",
+      "thumb": "/img/sml/image12sml.jpg",
       "date": "2022",
       "info": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt necessitatibus est reiciendis. Alias ab eius dicta, provident quidem ad? Cumque magni architecto ratione repellendus enim sit labore explicabo voluptate suscipit!"
     }
