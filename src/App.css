@@ -144,15 +144,14 @@ ul {
 }
 
 .Modal-content {
-  max-width: 60%;
-  max-height: 40%;
-  width: 40%;
+  width: 900px;
+  height: 500px;
   background-color: #fff;
   color: #000;
   opacity: 100%;
   z-index: 4;
   overflow: scroll;
-  padding: 25px 50px;
+  padding: 25px 25px;
 }
 .Modal-content::-webkit-scrollbar {
   display: none;
@@ -196,4 +195,11 @@ ul {
   font-size: 18px;
   color: #fff;
   padding: 16px;
+}
+
+.Statement-image {
+  max-width: inherit;
+  max-height: inherit;
+  height: inherit;
+  width: inherit;
 }

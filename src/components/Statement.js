@@ -15,7 +15,11 @@ function Statement({ setStatementOpen }) {
         <div>
           <h1>Artist Statement</h1>
           <div className='Modal-body'>
-            <img src='./img/statement.jpg' alt='statement' />
+            <img
+              className='Statement-image'
+              src='./img/statement.jpg'
+              alt='statement'
+            />
           </div>
         </div>
       </div>

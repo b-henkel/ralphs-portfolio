@@ -6,7 +6,6 @@ import 'react-modern-drawer/dist/index.css';
 import {
   RiGalleryLine,
   RiCloseCircleLine,
-  RiInformationLine,
   RiArrowLeftCircleLine,
   RiArrowRightCircleLine,
 } from 'react-icons/ri';
@@ -16,15 +15,11 @@ import Statement from './components/Statement';
 function App() {
   const [imageShown, setImageShown] = useState(0);
   const [isOpen, setIsOpen] = useState(false);
-  const [infoIsOpen, setInfoIsOpen] = useState(false);
   const [statementOpen, setStatementOpen] = useState(false);
   const imagesArr = imageData.images;
 
   const toggleDrawer = () => {
     setIsOpen((prevState) => !prevState);
-  };
-  const toggleInfo = () => {
-    setInfoIsOpen((prevState) => !prevState);
   };
 
   const imagesSorted = imageData.catagories.map(() => []);
@@ -71,7 +66,6 @@ function App() {
     }
     if (e.key === 'Escape') {
       setIsOpen(false);
-      setInfoIsOpen(false);
 
       setStatementOpen(false);
     }
@@ -134,29 +128,10 @@ function App() {
           </footer>
         </div>
       </Drawer>
-      <Drawer
-        style={styles}
-        size='25vh'
-        open={infoIsOpen}
-        onClose={toggleInfo}
-        direction='bottom'
-      >
-        <div className='Drawer-style'>
-          <RiCloseCircleLine
-            className='Close-button'
-            onClick={() => setInfoIsOpen(false)}
-          />
-          <div className='Info-text'>
-            <h1>{imagesArr[imageShown].title}</h1>
-            <br></br>
-            <h3>{imagesArr[imageShown].date}</h3>
-            <p>{imagesArr[imageShown].info}</p>
-          </div>
-        </div>
-      </Drawer>
-      <img className='App-title' src='/img/image07.jpg' alt='splash' />
+
+      <img className='App-title' src='/img/splash.jpg' alt='splash' />
       <RiGalleryLine className='Gallery-button' onClick={toggleDrawer} />
-      <RiInformationLine className='Info-button' onClick={toggleInfo} />
+
       <div className='App-image-container'>
         {statementOpen && <Statement setStatementOpen={setStatementOpen} />}
         <img
