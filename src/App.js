@@ -117,14 +117,14 @@ function App() {
             })}
           </div>
           <footer className='Drawer-nav'>
-            <button
+            {/* <button
               className='Nav-button'
               onClick={() => {
                 setStatementOpen(true);
               }}
             >
               Artist Statement
-            </button>
+            </button> */}
           </footer>
         </div>
       </Drawer>
